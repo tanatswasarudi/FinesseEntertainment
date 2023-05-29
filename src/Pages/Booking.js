@@ -8,7 +8,7 @@ const Booking = () => {
   const DataProduct = useSelector((state) => state.product.productList);
 
   const productDisplay = DataProduct.filter((el) => el._id === filterby)[0];
-  console.log(productDisplay);
+  
   return (
     <div className="py-2 md:p-4">
       <div className="w-full max-w-3xl m-auto md:flex ">

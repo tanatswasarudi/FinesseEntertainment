@@ -14,7 +14,7 @@ function App() {
  
   useEffect(()=>{
  (async()=>{
-  const Res = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/product`) 
+  const Res = await fetch(`${process.env.REACT_APP_SERVER_DORMIN}/product `)  
   const Resdata = await Res.json()
   console.log(Resdata)
   dispatch(setDataProduct(Resdata))

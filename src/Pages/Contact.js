@@ -57,7 +57,7 @@ const Contact = () => {
     }
   };
 
-  return (
+  return ( 
     <div
       className="bg-cover bg-center h-full min-h-screen"
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -68,7 +68,7 @@ const Contact = () => {
             Contact Us
             <span className="absolute left-1/2 bg-cyan-600 -bottom-2 -translate-x-1/2 h-[1px] w-[100px]"></span>
           </h1>
-          <p className="text-gray-500 py-3">
+          <p className="text-gray-700 py-3">
               <span className="flex flex-row items-center cursor-pointer hover:text-yellow-500"><MdEmail/><strong>Email:</strong>finesseentertainment@gmail.com</span><br/>
               <span className="flex flex-row items-center cursor-pointer hover:text-yellow-500"><BsFacebook /><strong>Facebook: </strong>FinesseEntertainment</span><br/>
               <span className="flex flex-row items-center cursor-pointer hover:text-yellow-500"><FaWhatsappSquare /><strong>WhatsApp:</strong>+918264420815</span><br/>

@@ -16,8 +16,16 @@ const About = () => {
     <div
       className="bg-cover min-h-screen bg-center h-full"
       style={{ backgroundImage: `url(${bgImage})` }}
-    >
-    <div className='flex flex-col gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all' >
+    >  <div className=" px-10 grid grid-cols-1 lg:grid-cols-2">
+           <div className="text-cyan-500  ">
+          <h1 className="text-2xl md:text-3xl relative inline font-bold">
+            FINESSE ENTERTAINMENT OFFERS
+            <span className="absolute left-1/2  bg-cyan-600 -bottom-2 -translate-x-1/2 h-[1px] w-[400px] md:w-[300px]">
+            </span>
+          </h1>
+        </div>
+           
+    <div className='flex flex-col gap-5 py-20 overflow-scroll scrollbar-none scroll-smooth transition-all' >
           {
             homeProductCartListChairs.map(el=>{
               return(
@@ -35,6 +43,8 @@ const About = () => {
            }
           
         </div>
+    </div>
+   
 
     </div>
   );

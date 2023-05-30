@@ -52,6 +52,7 @@ const Login = () => {
     const Resdata = await fetchData.json()
     console.log(Resdata)
     toast(Resdata.message)
+    alert("Login Succesful")
             if(Resdata.alert){
               dispatch(loginRedux(Resdata))
               setTimeout(()=>{

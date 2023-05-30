@@ -66,10 +66,12 @@ const Signup = () => {
             const Resdata = await fetchData.json()
             console.log(Resdata)
             toast("Successfull")
+            alert("Signup was succesful")
             navigate("/login")
         }
         else{
             toast("password and confirm password not equal")
+            alert("password and confirm password not equal")
         }
     }
     else{

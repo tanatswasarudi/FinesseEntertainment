@@ -66,14 +66,15 @@ const Contact = () => {
         <div className="text-cyan-500 ">
           <h1 className="text-2xl relative inline font-bold">
             Contact Us
-            <span className="absolute left-1/2 bg-cyan-600 -bottom-2 -translate-x-1/2 h-[1px] w-[100px]"></span>
+            <span className="absolute left-1/2 bg-cyan-600 -bottom-2 md:-translate-x-1/2 h-[1px] md:w-[100px]"></span>
           </h1>
-          <p className="text-gray-700 py-3">
+          <p className="text-gray-700 text-base py-3">
               <span className="flex flex-row items-center cursor-pointer hover:text-yellow-500"><MdEmail/><strong>Email:</strong>finesseentertainment@gmail.com</span><br/>
               <span className="flex flex-row items-center cursor-pointer hover:text-yellow-500"><BsFacebook /><strong>Facebook: </strong>FinesseEntertainment</span><br/>
               <span className="flex flex-row items-center cursor-pointer hover:text-yellow-500"><FaWhatsappSquare /><strong>WhatsApp:</strong>+918264420815</span><br/>
               </p>
         </div>
+        <div>
         <form
           className="text-black items-center w-[400px] bg-slate-500 font-semibold shadow drop-shadow-lg"
           onSubmit={handleSubmit}
@@ -158,6 +159,8 @@ const Contact = () => {
             </button>
           </div>
         </form>
+        </div>
+       
       </div>
     </div>
   );

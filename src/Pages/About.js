@@ -55,7 +55,7 @@ const About = () => {
           </h1>
          
           </Link>
-          <h3 className="bg-slate-200 font-serif  mb-6  rounded hover:bg-slate-500 shadow cursor-pointer">
+          <h3 className="bg-slate-200 font-serif mt-2 mb-6  rounded hover:bg-slate-500 shadow cursor-pointer">
           <span className="text-cyan-500 mb-6"> Connect With Us</span> 
           <span className="flex flex-row items-center  font-serif " onClick={connectWithWhatsApp}><FaWhatsappSquare className="text-3xl text-green-500"/></span>
             

@@ -43,7 +43,7 @@ const About = () => {
               <span className="flex flex-row items-center cursor-pointer font-serif hover:text-green-900" onClick={connectWithWhatsApp}><FaWhatsappSquare className="text-green-500" /><strong>WhatsApp:</strong>+918264420815</span><br/>
               </p>
 
-     <div className="py-10 md:px-10 grid grid-cols-2 lg:grid-cols-2">
+     <div className="py-10 md:px-10 grid grid-cols-1 lg:grid-cols-2">
        <div className="text-cyan-500 cursor-pointer  ">
             <h1 className="bg-slate-200 rounded shadow text-center md:text-3xl text-base font-bold">
             OUR BEST OFFERS  <span> </span>

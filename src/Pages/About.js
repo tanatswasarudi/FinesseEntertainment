@@ -34,7 +34,7 @@ const About = () => {
   <div className=" justify center mb-4">
     <img src={banner} alt="" className="w-full"/>
   </div>
-  <h1 className="text-white text-lg md:px-10 font-serif mt-2 mb-6">
+  <h1 className="text-white text-lg md:px-8 font-serif mt-2 mb-6">
           We are here to provide the best service <BsFillSpeakerFill className='text-2xl text-red-500'/>
           </h1>
           <p className="text-gray-500 md:px-10 ">
@@ -43,7 +43,7 @@ const About = () => {
               <span className="flex flex-row items-center cursor-pointer font-serif hover:text-green-900" onClick={connectWithWhatsApp}><FaWhatsappSquare className="text-green-500" /><strong>WhatsApp:</strong>+918264420815</span><br/>
               </p>
 
-     <div className="py-10 md:px-10 grid grid-cols-1 lg:grid-cols-2">
+     <div className="py-10 md:px-8 grid grid-cols-1 lg:grid-cols-2">
        <div className="text-cyan-500 cursor-pointer  ">
             <h1 className="bg-slate-200 rounded shadow text-center md:text-3xl text-base font-bold">
             OUR BEST OFFERS  <span> </span>

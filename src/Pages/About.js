@@ -60,7 +60,7 @@ const About = () => {
 
         </div>
            
-    <div className='flex flex-col gap-5 py-20 overflow-scroll scrollbar-none scroll-smooth' >
+    <div className='flex flex-col gap-5 py-10 overflow-scroll scrollbar-none scroll-smooth' >
           {
             homeProductCartListChairs.map(el=>{
               return(

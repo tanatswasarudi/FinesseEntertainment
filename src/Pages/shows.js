@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {ImPriceTag} from 'react-icons/im'
 import {BiUpload} from 'react-icons/bi'
 import { imagetobase64 } from '../utility/imagetobase64'

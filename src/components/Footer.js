@@ -11,7 +11,7 @@ import {BiChevronRight} from 'react-icons/bi'
 const Footer = ({id}) => {
   const connectWithWhatsApp = () => {
     // Replace the following with your WhatsApp number
-    const phoneNumber = '+263 783-677-124';
+    const phoneNumber = '+263783677124';
 
     // Create the WhatsApp URL
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
@@ -20,7 +20,7 @@ const Footer = ({id}) => {
     window.open(url);
   }
 
-  const phoneNumber = '+263 783-677-124'; // Replace with the desired recipient's phone number
+  const phoneNumber = '+263783677124'; // Replace with the desired recipient's phone number
 
   const handleCallRequest = () => {
     const message = 'Please call me back!'; // Customize the call request message

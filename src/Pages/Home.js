@@ -29,7 +29,7 @@ const Home = () => {
   const prevProduct = ()=>{
     slideProductRef.current.scrollLeft -= 200
   }
-  const phoneNumber = '+263 783-677-124'; // Replace with the desired recipient's phone number
+  const phoneNumber = '+263783677124'; // Replace with the desired recipient's phone number
 
   const handleCallRequest = () => {
     const message = 'Please call me back!'; // Customize the call request message

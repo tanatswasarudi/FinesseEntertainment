@@ -90,7 +90,7 @@ const Header = () => {
                   >
                     {" "}
                     <BiUserMinus/>
-                   <span className="text-sm"> Logout</span>  ({userData.username}){" "}
+                   <span className="text-sm mb-6">Logout({userData.username}){" "}</span>
                   </p>
                 ) : (
                   <Link

@@ -71,7 +71,7 @@ const Header = () => {
             </div>
             {showMenu && (
               <div className="absolute  bg-purple-700 right-2 py-1 font-serif w-36 flex items-center flex-col m-auto cursor-pointer shadow rounded min-w-[100px]">
-                <nav className="flex items-center flex-col text-base w-32 px-2 py-1 md:text-lg bg-black text-cyan-500 md:hidden rounded">
+                <nav className="flex items-center flex-col text-base w-32 px-2 py-1 md:text-lg bg-black text-cyan-500 ">
                 {userData.email === process.env.REACT_APP_ADMIN_EMAIL && (
                   <Link to={"newproduct"} className="   hover:text-cyan-900 ">
                     <MdProductionQuantityLimits/>

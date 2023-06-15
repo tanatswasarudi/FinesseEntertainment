@@ -7,7 +7,7 @@ const Homecard = ({ name, image, category, price, loadingArray,id }) => {
       {name ? (
         <>
         <Link to={ `/booking/${id}`} onClick={()=>window.scrollTo({top:"0",behavior : "smooth"})}>
-          <div className="w-40 min-h-[150px]">
+          <div className="w-36 min-h-[150px]">
             <img src={image} className="h-full w-full" />
           </div>
           <h3 className="font-semibold text-black text-center capitalize text-lg">

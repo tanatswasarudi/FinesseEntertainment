@@ -54,7 +54,12 @@ const Home = () => {
               homeShowsCartLIst[0] ? 
               homeShowsCartLIst.map(el=>{
                 return(
-                  <HomeCards/>
+                  <HomeCards
+                  key={el._id}
+                  image={el.image}
+                  name={el.name}
+                  description={el.description}
+                  />
                 )
               }) :
               LoadingArrays.map((el,index)=>{

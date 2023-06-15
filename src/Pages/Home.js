@@ -11,13 +11,15 @@ const Home = () => {
   const DataProduct = useSelector((state)=>state.product.productList)
   console.log(DataProduct)
   const homeProductCartList = DataProduct.slice(3,7)
+   //Events
+   const ProductData = useSelector((state)=>state.shows.showsList)
+   console.log(ProductData)
+   const homeShowsCartLIst = ProductData.slice(1,2)
+   
   const homeProductCartListChairs = DataProduct.filter(el => el.category === "chairs & tables",[])
   console.log(homeProductCartListChairs)
 
-  //Events
-  const ProductData = useSelector((state)=>state.shows.showsList)
-  console.log(ProductData)
-  const homeShowsCartLIst = ProductData.slice(1,2)
+ 
 
   const LoadingArray = new Array(4).fill(null)
   const LoadingArrays = new Array(2).fill(null)

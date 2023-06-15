@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Homecard = ({ name, image, category, price, loadingArray,id }) => {
   return (
-    <div className=" bg-slate-200 p-2 shadow min-w-[120px]">
+    <div className=" bg-slate-200 p-2 shadow min-w-[150px]">
       {name ? (
         <>
         <Link to={ `/booking/${id}`} onClick={()=>window.scrollTo({top:"0",behavior : "smooth"})}>

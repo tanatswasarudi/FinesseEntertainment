@@ -19,6 +19,7 @@ import Newproduct from "./Pages/Newproduct";
 import { store } from "./redux/index";
 import { Provider } from "react-redux";
 import {disableReactDevTools} from '@fvilers/disable-react-devtools'
+import Shows from './Pages/shows'
 
 if (process.env.NODE_ENV === 'production') disableReactDevTools()
 
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
       <Route path="booking/:filterby" element={<Booking />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
+      <Route path="shows" element={<Shows/>}/>
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<Signup />} />
       <Route path="newproduct" element={<Newproduct />} />

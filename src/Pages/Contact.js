@@ -57,9 +57,27 @@ const Contact = () => {
     }
   };
 
+  const connectWithWhatsApp = () => {
+    // Replace the following with your WhatsApp number
+    const phoneNumber = '+263 783-677-124';
+
+    // Create the WhatsApp URL
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
+
+    // Open the WhatsApp URL
+    window.open(url);
+  }
+  const phoneNumber = '+263 783-677-124'; // Replace with the desired recipient's phone number
+
+  const handleCallRequest = () => {
+    const message = 'Please call me back!'; // Customize the call request message
+    const callUrl = `tel:${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(callUrl);
+  };
+
   return ( 
     <div
-      className="bg-cover bg-center h-full min-h-screen"
+      className="bg-cover bg-center h-full min-h-screen w-full"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="py-20 px-10 grid grid-cols-1 lg:grid-cols-2">
@@ -69,14 +87,14 @@ const Contact = () => {
             <span className="absolute left-1/2 bg-cyan-600 -bottom-2 md:-translate-x-1/2 h-[1px] md:w-[100px]"></span>
           </h1>
           <p className="text-gray-700 text-base py-3">
-              <span className="flex flex-row items-center cursor-pointer hover:text-yellow-500"><MdEmail/><strong>Email:</strong>finesseentertainment@gmail.com</span><br/>
-              <span className="flex flex-row items-center cursor-pointer hover:text-yellow-500"><BsFacebook /><strong>Facebook: </strong>FinesseEntertainment</span><br/>
-              <span className="flex flex-row items-center cursor-pointer hover:text-yellow-500"><FaWhatsappSquare /><strong>WhatsApp:</strong>+918264420815</span><br/>
+              <span className="flex flex-row items-center cursor-pointer hover:text-red-500"><MdEmail /><strong>Email:</strong>finesseentertainment@gmail.com</span><br/>
+              <span className="flex flex-row items-center cursor-pointer hover:text-blue-500"><BsFacebook className="text-blue-500" /><strong>Facebook: </strong>FinesseEntertainment</span><br/>
+              <span className="flex flex-row items-center cursor-pointer hover:text-green-500"><FaWhatsappSquare className="text-green-500" onClick={connectWithWhatsApp} /><strong>WhatsApp:</strong></span><br/>
               </p>
         </div>
         <div>
         <form
-          className="text-black items-center w-[400px] bg-slate-500 font-semibold shadow drop-shadow-lg"
+          className="text-black items-center md:w-[400px] bg-slate-500 font-semibold shadow "
           onSubmit={handleSubmit}
         >
           <div className="py-3 px-3 w-full">
@@ -84,7 +102,7 @@ const Contact = () => {
               Your Name{" "}
               <span className="text-md text-blue-200">(required)</span>
             </label>
-            <div className="flex items-center bg-slate-300 border-red-600 focus:border mt-2 w-[360px] h-10">
+            <div className="flex items-center bg-slate-300 border-red-600 focus:border mt-2 md:w-[360px] h-10">
               <span>
                 <FaUserTie className="text-xl flex" />
               </span>
@@ -104,7 +122,7 @@ const Contact = () => {
               Your Email{" "}
               <span className="text-md text-blue-200">(required)</span>
             </label>
-            <div className="bg-slate-300 mt-2 flex items-center w-[360px] border-red-600 focus:border h-10">
+            <div className="bg-slate-300 mt-2 flex items-center md:w-[360px] border-red-600 focus:border h-10">
               <span>
                 <MdEmail className="text-xl flex " />
               </span>
@@ -124,7 +142,7 @@ const Contact = () => {
               Your Phone{" "}
               <span className="text-md text-blue-200">(required)</span>
             </label>
-            <div className="bg-slate-300 mt-2 flex items-center w-[360px] border-red-600 focus:border h-10">
+            <div className="bg-slate-300 mt-2 flex items-center md:w-[360px] border-red-600 focus:border h-10">
               <span>
                 <IoMdCall className="text-xl flex " />
               </span>
@@ -148,7 +166,7 @@ const Contact = () => {
               name="message"
               placeholder="Tell Us What You Think"
               rows="6"
-              className="mt-2 flex items-center w-[360px] bg-slate-300 border-red-600 focus:border "
+              className="mt-2 flex items-center w-[245px] md:w-[360px] bg-slate-300 border-red-600 focus:border "
               onChange={handleOnChange}
               value={data.message}
             ></textarea>

@@ -4,6 +4,14 @@ import { FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutRedux } from "../redux/userSlice";
+import { FaWhatsappSquare } from "react-icons/fa";
+import {IoMdCall} from 'react-icons/io'
+import {AiFillHome,AiOutlineUserAdd} from 'react-icons/ai'
+import {TbBrandBooking} from 'react-icons/tb'
+import {MdRoundaboutRight,MdProductionQuantityLimits} from 'react-icons/md'
+import {FcBusinessContact} from 'react-icons/fc'
+import {BiUserMinus}from 'react-icons/bi'
+import {BsSpeakerFill} from 'react-icons/bs'
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -17,6 +25,26 @@ const Header = () => {
   const handleLogout = () => {
     dispatch(logoutRedux());
   };
+  const phoneNumber = '+263 783-677-124'; // Replace with the desired recipient's phone number
+
+  const handleCallRequest = () => {
+    const message = 'Please call me back!'; // Customize the call request message
+    const callUrl = `tel:${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(callUrl);
+  };
+
+  const connectWithWhatsApp = () => {
+    // Replace the following with your WhatsApp number
+    const phoneNumber = '+263 783-677-124';
+
+    // Create the WhatsApp URL
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
+
+    // Open the WhatsApp URL
+    window.open(url);
+  }
+
+
   console.log(process.env.REACT_APP_ADMIN_EMAIL);
   return (
     <header className="fixed drop-shadow-md shadow h-20 w-full z-50 ">
@@ -30,7 +58,7 @@ const Header = () => {
           <nav className="hidden md:flex gap-4 md:gap-6 text-base text-cyan-500 md:text-lg">
             <Link to={""}>Home</Link>
             <Link to={"booking/647088ad12910f3979832dc9"}>Booking</Link>
-            <Link to={"about"}>News</Link>
+            <Link to={"about"}>About</Link>
             <Link to={"contact"}>Contact</Link>
           </nav>
           <div className=" px-2 cursor-pointer" onClick={handleShowMenu}>
@@ -42,35 +70,46 @@ const Header = () => {
               )}
             </div>
             {showMenu && (
-              <div className="absolute right-2 bg-slate-200 py-1 px-1 w-17 flex items-center flex-col m-auto cursor-pointer shadow drop-shadow-md min-w-[100px]">
+              <div className="absolute  bg-purple-700 right-2 py-1 font-serif w-36 flex items-center flex-col m-auto cursor-pointer shadow rounded min-w-[100px]">
+                <nav className="flex items-center flex-col text-base w-32 px-2 py-1 md:text-lg bg-black text-cyan-500 md:hidden rounded">
                 {userData.email === process.env.REACT_APP_ADMIN_EMAIL && (
-                  <Link to={"newproduct"} className="bg-slate-200 w-17">
-                    Newproduct
-                  </Link>
+                  <Link to={"newproduct"} className="   hover:text-cyan-900 ">
+                    <MdProductionQuantityLimits/>
+                  Newproduct
+                  </Link> &&
+                   <Link to={"shows"} className="">
+                    <BsSpeakerFill/>
+                  Shows
+                 </Link>
                 )}
 
                 {userData.username ? (
                   <p
-                    className="cursor-pointer text-black px-2 bg-slate-600"
+                    className=""
                     onClick={handleLogout}
                   >
                     {" "}
-                    Logout ({userData.username}){" "}
+                    <BiUserMinus/>
+                   <span className="text-sm"> Logout</span>  ({userData.username}){" "}
                   </p>
                 ) : (
                   <Link
                     to={"login"}
-                    className="cursor-pointer justify-center bg-slate-200 "
+                    className="mb-6"
                   >
                     {" "}
+                    <AiOutlineUserAdd/>
                     Login{" "}
                   </Link>
                 )}
-                <nav className="flex items-center flex-col text-base md:text-lg bg-black text-cyan-500 md:hidden rounded">
-                  <Link to={""}className="px-2 py-1">Home</Link>
-                  <Link to={"booking/647088ad12910f3979832dc9"}className="px-2 py-1">Booking</Link>
-                  <Link to={"about"}className="px-2 py-1">News</Link>
-                  <Link to={"contact"}className="px-2 py-1">Contact</Link>
+                
+                  <Link to={""}className="mb-6 "><AiFillHome/>Home</Link>
+                  <Link to={"booking/647088ad12910f3979832dc9"}className="mb-6"><TbBrandBooking/>Booking</Link>
+                  <Link to={"about"}className="mb-6"><MdRoundaboutRight/>About</Link>
+                  <Link to={"contact"}className="mb-6"><FcBusinessContact/>Contact</Link>
+                  <FaWhatsappSquare onClick={connectWithWhatsApp} className="text-3xl mb-6 text-green-600"/>
+                  <IoMdCall onClick={handleCallRequest} className="text-blue-500 text-3xl"/>
+
                 </nav>
               </div>
             )}

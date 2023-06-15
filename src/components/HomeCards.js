@@ -3,18 +3,7 @@ import React, { useState, useEffect } from 'react'
 const HomeCards = ({name,description,image,loadingArrays}) => {
 
 
-    const Slideshow = ({ image }) => {
-        const [currentIndex, setCurrentIndex] = useState(0);
-      
-        useEffect(() => {
-          const intervalId = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % image.length);
-          }, 3000);
-      
-          return () => {
-            clearInterval(intervalId);
-          };
-        }, [image]);}
+  
   return (
     <div className='bg-slate-200 p-2 min-w-[100px] max-w-[100px] hover:shadow-xl py-5 px-4 cursor-pointer flex flex-col'>
       {name ? (
@@ -23,16 +12,9 @@ const HomeCards = ({name,description,image,loadingArrays}) => {
             {" "}
             {name}{" "}
           </h3>
-         <div className="md:w-60 w-20  min-h-[150px]">
-         {image.map((image, index) => (
-        <div
-          key={index}
-          className={`slide ${index === currentIndex ? 'active' : 'h-full w-full'}`}
-          style={{ backgroundImage: `url(${image})` }}
-        ></div>
-      ))}
+          <div className="w-24 min-h-[150px]">
+            <img src={image} className="h-full w-full" />
           </div>
-
           <h3 className=" text-red-400 text-center capitalize text-sm">
             {" "}
             {description}{" "}

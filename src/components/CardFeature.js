@@ -2,6 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CardFeature = ({ image, name, price, category,id }) => {
+  const connectWithWhatsApp = () => {
+    // Replace the following with your WhatsApp number
+    const phoneNumber = '+263783677124';
+
+    // Create the WhatsApp URL
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
+
+    // Open the WhatsApp URL
+    window.open(url);
+  }
   return (
     <div className="w-full min-w-[200px] max-w-[200px]  gap-3  hover:shadow-lg  py-5 px-4 cursor-pointer flex flex-col">
       
@@ -20,7 +30,7 @@ const CardFeature = ({ image, name, price, category,id }) => {
         <span className="text-red-500">$</span>
         <span>{price}</span>
       </p>
-      <button className="flex items-center flex-col justify-center w-full bg-yellow-500 mb-3 py-1 px-4 rounded hover:bg-yellow-300">Book</button>
+      <button onClick={connectWithWhatsApp} className="flex items-center flex-col justify-center w-full bg-yellow-500 mb-3 py-1 px-4 rounded hover:bg-yellow-300">Book</button>
       </Link>
     </div>
     
